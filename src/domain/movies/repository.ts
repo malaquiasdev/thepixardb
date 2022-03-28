@@ -7,7 +7,7 @@ export async function findMoviesBy(tableName: string, language?: string): Promis
 }
 
 export async function findMovieBy(tableName: string, id: string, language?: string): Promise<MovieModel> {
-  const query = `SELECT * FROM ${tableName} WHERE "id" = '${id}' AND "sk" = 'LANGUAGE#${language}'`;
+  const query = `SELECT * FROM ${tableName} WHERE "pk" = '${id}' AND "sk" = 'LANGUAGE#${language}'`;
   const result = await executePartiQL(query);
   return result[0];
 }

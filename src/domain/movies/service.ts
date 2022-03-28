@@ -1,33 +1,34 @@
 import { findMoviesBy, findMovieBy } from './repository';
 import { MovieDTO, MovieListDTO } from './movies';
 
-export async function findMovies(tableName: string, language?): Promise<MovieListDTO[]> {
-  const movies = await findMoviesBy(tableName, language || 'en');
+export async function findMovies(tableName: string, language = 'en'): Promise<MovieListDTO[]> {
+  const movies = await findMoviesBy(tableName, language);
   return movies.map(m => {
     return {
-      id: m.id,
+      id: m.pk,
       title: m.title,
-      description: m.description,
-      releaseYear: m.releaseYear,
+      description: m.descriptionShort,
+      releaseDate: m.releaseDate,
       runtime: m.runtime,
-      //poster: m.posters[0] ? m.posters[0] : { width: 0, height: 0, url: null },
+      posterUrl: m.images.find(i => i.primary && i.key === language && i.path.includes(`/2_3/${language}`)).path,
+      bannerUrl: m.images.find(i => i.primary && i.key === language && i.path.includes(`/16_9/${language}`)).path,
     };
   });
 }
 
-export async function findMovie(tableName: string, id: string, language?: string): Promise<MovieDTO> {
-  const movie = await findMovieBy(tableName, id, language || 'en-us');
+export async function findMovie(tableName: string, id: string, language = 'en'): Promise<MovieDTO> {
+  const movie = await findMovieBy(tableName, id, language);
   return {
-    id: movie.id,
+    id: movie.pk,
     title: movie.title,
     description: movie.description,
-    genres: movie.genres.split(';'),
-    adult: movie.adult,
-    originalLanguage: movie.originalLanguage,
+    descriptionShort: movie.descriptionShort,
+    genres: movie.genres,
     runtime: movie.runtime,
     budget: movie.budget,
-    releaseYear: movie.releaseYear,
+    releaseDate: movie.releaseDate,
     revenue: movie.revenue,
-    posters: movie.posters,
+    rating: movie.rating,
+    images: movie.images.filter(i => i.primary && i.key === language),
   };
 }

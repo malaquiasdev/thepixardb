@@ -1,46 +1,57 @@
+type Rate = {
+  organ: string;
+  value: string;
+  key: string;
+};
+
+type ExternalId = {
+  themoviedb: number;
+  imdb: string;
+};
+
 type Image = {
-  width: number;
-  url: string;
-  height: number;
+  path: string;
+  primary: boolean;
+  key: string;
 };
 
 export type MovieModel = {
-  id: string;
-  language: string;
+  pk: string;
+  sk: string;
   title: string;
+  descriptionShort: string;
   description: string;
-  genres: string;
-  adult: boolean;
-  originalLanguage: string;
   runtime: number;
   budget: number;
-  releaseYear: string;
-  revenue?: number;
-  updateAt: string;
-  createAt: string;
-  themoviedbId: number;
-  imdbid: string;
-  posters: Image[];
-};
-
-export type MovieDTO = {
-  id: string;
-  title: string;
-  description: string;
-  genres: string[];
-  adult: boolean;
-  originalLanguage: string;
-  runtime: number;
-  budget: number;
-  releaseYear: string;
   revenue: number;
-  posters: Image[];
+  releaseDate: string;
+  rating: Rate;
+  genres: string[];
+  images: Image[];
+  updateAt: Date;
+  createAt: Date;
 };
 
 export type MovieListDTO = {
   id: string;
   title: string;
-  releaseYear: string;
-  banner?: Image;
-  poster?: Image;
+  description: string;
+  runtime: number;
+  releaseDate: string;
+  posterUrl: string;
+  bannerUrl: string;
+};
+
+export type MovieDTO = {
+  id: string;
+  title: string;
+  descriptionShort: string;
+  description: string;
+  runtime: number;
+  budget: number;
+  revenue: number;
+  releaseDate: string;
+  rating: Rate;
+  genres: string[];
+  images: Image[];
 };
