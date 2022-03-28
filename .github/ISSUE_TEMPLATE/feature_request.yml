@@ -1,0 +1,27 @@
+name: '🚀 Feature Request'
+description: 'I have a specific suggestion!'
+labels: ['🥺 Needs Triage', '💡Proposal']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for taking the time to suggest a new feature!** Please make sure you read our [issue guidelines]() first, then fill out the fields below.
+  - type: textarea
+    attributes:
+      label: What problem are you trying to solve?
+      description: A concise description of what the problem is.
+      placeholder: 'e.g. I want to …'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'Describe the solution you’d like'
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: 'Describe any alternatives you’ve considered'
+      description: |
+        Can we already do this, but in a less convenient way?
+        Can you do this using other tools?
+        Do other popular build systems?

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`# Movies - service ## findMovies - should execute findMoviesBy and return MovieDTO as array with success 1`] = `
+Array [
+  Object {
+    "description": "Young Haru rescues a cat from being run over, but soon learns it's no ordinary feline; it happens to be the Prince of the Cats.",
+    "id": "MV_THE_CAT_RETURNS",
+    "poster": Object {
+      "height": 3000,
+      "url": "http://image.tmdb.org/t/p/original//pqyY7IEWkCWNZ7EuRStQaJITEta.jpg",
+      "width": 2000,
+    },
+    "releaseYear": "2002",
+    "runtime": 75,
+    "title": "The Cat Returns",
+  },
+]
+`;

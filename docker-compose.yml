@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  api:
+    image: thepixardb-api
+    build:
+      context: .
+      target: development
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - HTTP_PORT=3000
+      - HTTP_ADDRESS=0.0.0.0
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+      - ~/.aws/:/root/.aws:ro
+    command: yarn dev

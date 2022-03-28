@@ -1,0 +1,23 @@
+name: '🐛 Bug Report'
+description: We broke something, again
+title: '[Bug]: '
+labels: ['🥺 Needs Triage', '🐛 Bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for reporting an issue!** Please make sure you read our [issue guidelines]() first, then fill out the fields below.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: What happens?
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-expectation
+    attributes:
+      label: What were you expecting to happen?
+      description: A clear and concise description of what was supposed to happen.
+    validations:
+      required: true
