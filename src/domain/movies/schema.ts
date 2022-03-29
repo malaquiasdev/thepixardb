@@ -8,8 +8,8 @@ export const moviesSchema = {
       language: {
         type: 'string',
         description: 'Pass a ISO 639-1 value to display translated data for the fields that support it.',
-        default: 'EN-US',
-        enum: ['JA', 'EN-US', 'PT-BR'],
+        default: 'en',
+        enum: ['en', 'pt'],
       },
       genre: {
         type: 'string',
@@ -27,14 +27,8 @@ export const moviesSchema = {
           description: { type: 'string' },
           releaseYear: { type: 'string' },
           runtime: { type: 'number' },
-          poster: {
-            type: 'object',
-            properties: {
-              width: { type: 'integer' },
-              height: { type: 'integer' },
-              url: { type: 'string' },
-            },
-          },
+          posterUrl: { type: 'string' },
+          bannerUrl: { type: 'string' },
         },
       },
     },
@@ -60,8 +54,8 @@ export const movieSchema = {
       language: {
         type: 'string',
         description: 'Pass a ISO 639-1 value to display translated data for the fields that support it.',
-        default: 'EN-US',
-        enum: ['JA', 'EN-US', 'PT-BR'],
+        default: 'en',
+        enum: ['en', 'pt'],
       },
     },
   },

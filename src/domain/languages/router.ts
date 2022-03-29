@@ -1,8 +1,7 @@
-import fp from 'fastify-plugin';
 import { languageController } from './controller';
 import { schema } from './schema';
 
-export default fp(async (server, _, next) => {
+export default function languageRouter(server, _, next) {
   server.route({
     url: '/languages',
     logLevel: 'warn',
@@ -11,4 +10,4 @@ export default fp(async (server, _, next) => {
     schema,
   });
   next();
-});
+}

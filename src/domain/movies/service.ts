@@ -1,6 +1,16 @@
 import { findMoviesBy, findMovieBy } from './repository';
 import { MovieDTO, MovieListDTO } from './movies';
 
+function _getImageUrl(images, ratio: string, language: string): string {
+  const image = images.find(image => image.key === language && image.path.includes(`/${ratio}/${language}`));
+
+  if (image) {
+    return image.path;
+  }
+
+  return '';
+}
+
 export async function findMovies(tableName: string, language = 'en'): Promise<MovieListDTO[]> {
   const movies = await findMoviesBy(tableName, language);
   return movies.map(m => {
@@ -10,8 +20,8 @@ export async function findMovies(tableName: string, language = 'en'): Promise<Mo
       description: m.descriptionShort,
       releaseDate: m.releaseDate,
       runtime: m.runtime,
-      posterUrl: m.images.find(i => i.primary && i.key === language && i.path.includes(`/2_3/${language}`)).path,
-      bannerUrl: m.images.find(i => i.primary && i.key === language && i.path.includes(`/16_9/${language}`)).path,
+      posterUrl: _getImageUrl(m.images, '2_3', language),
+      bannerUrl: _getImageUrl(m.images, '16_9', language),
     };
   });
 }

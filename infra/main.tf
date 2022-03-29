@@ -19,7 +19,7 @@ module "api_gw" {
   source          = "./modules/gateway"
   name            = "${var.project_name}-${var.project_name_suffix}"
   protocol        = "HTTP"
-  stage_name      = "beta"
+  stage_name      = "$default"
   log_retention   = 1
   integration_uri = module.lambda_api.lambda_arn
   function_name   = module.lambda_api.lambda_name
