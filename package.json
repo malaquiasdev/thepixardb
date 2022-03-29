@@ -1,6 +1,6 @@
 {
   "name": "thepixardb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Pixar Database API",
   "repository": "git@github.com:malaquiasdev/thepixardb.git",
   "author": "Mateus Malaquias <mateusmalaquiasdev@outlook.com>",
