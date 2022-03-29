@@ -11,11 +11,12 @@ dotenv.config();
 
 const address = process.env.HTTP_ADDRESS || '127.0.0.1';
 const port = process.env.HTTP_PORT || 8000;
+const routerPrefix = '/api/v0';
 
 server.register(swaggerPlugin, swaggerConfig);
 server.register(blippPlugin);
-server.register(langagueRouter);
-server.register(movieRouter);
+server.register(langagueRouter, { prefix: routerPrefix });
+server.register(movieRouter, { prefix: routerPrefix });
 
 if (require.main === module) {
   server.listen(port, address, (err, address) => {
