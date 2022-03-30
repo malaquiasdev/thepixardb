@@ -1,19 +1,12 @@
-FROM node:14.19-alpine as base
+FROM node:14.19-alpine as api
 WORKDIR /usr/src/app
-COPY package*.json ./
-COPY yarn.lock ./
+ENV NODE_ENV=local
+COPY . .
 RUN yarn install
 
-FROM base as development
-ENV NODE_ENV=development
-COPY . .
-RUN yarn run prebuild
-RUN yarn run build
-
-FROM base as production
-ENV NODE_ENV=production
-COPY --from=development /usr/src/app/build ./build
-COPY --from=development /usr/src/app/src ./src
-RUN yarn install --production
-RUN yarn cache clean
-CMD ["yarn", "start"]
+FROM base as database
+RUN apk update && apk add git
+WORKDIR /usr/src/database
+RUN git clone https://github.com/malaquiasdev/thepixardb-wall-e.git .
+ENV NODE_ENV=local
+RUN yarn install

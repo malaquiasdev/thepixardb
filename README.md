@@ -1,16 +1,33 @@
-# <img width="60" height="60" src=".github/logo.png"/> ThePixarDB
+# ThePixarDB
 
-<p align="center">
-  <img width="400" height="200" src=".github/perfil.jpg"/>
-</p>
+**ThePixarDB** is an centralized database of the feature filmes, short filmes, collections, actors, directors and much more. We have all the data you'll ever need in one place, easily accessible through with a modern RESTful API.
 
-**ThePixarDB** is an umbrella organization to provide a centralized data of the movies, documentaries and people from The Pixar Company. You can try it and make any free non-commercial project.
+**It is unofficial and we are made by fans to fans.**
 
-It is unofficial and we are made by fans to fans.
+This project is a RESTful API and will be a GraphQL API too.
 
-This project is a RESTful and will be a GraphQL API too. You will access to hundreds informations of our central database.
+## Setup Local - Docker and Compose 🖥️
 
-## To know more about us and this project please go to
+We are using docker for create a local environment. The process is managed by Docker Compose.
+
+This setup it's not recommend to create a production environment, for that we have a terraform module inside of the infra folder.
+
+You can start everthing by:
+
+```bash
+make setup-local
+```
+
+Or if you don't have **make** on your machine you can use:
+
+```bash
+docker-compose up
+....
+```
+
+## Testing
+
+## To know more
 
 - [About](https://thepixardb.malaquias.dev/about/)
 - [Features list]()
