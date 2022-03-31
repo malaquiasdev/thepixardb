@@ -6,23 +6,38 @@
 
 This project is a RESTful API and will be a GraphQL API too.
 
-## Setup Local - Docker and Compose 🖥️
+## Setup Local 🖥️
 
-We are using docker for create a local environment. The process is managed by Docker Compose.
+### Prerequisites 📝
 
-This setup it's not recommend to create a production environment, for that we have a terraform module inside of the infra folder.
+Before you begin, ensure you have met the following requirements:
 
-You can start everthing by:
+- You must have an AWS Credentials
+- Configure the [AWS CLI](https://aws.amazon.com/pt/cli/)
+- You have installed the [Node.js](https://nodejs.org/en/)
+- You have installed the [Yarn](https://yarnpkg.com)
+- You have installed the [Terraform](https://www.terraform.io)
 
-```bash
-make setup-local
+### Create the infra on AWS 🏗️
+
+```
+cd infra && terraform init && terraform terraform apply -auto-approve
 ```
 
-Or if you don't have **make** on your machine you can use:
+#### Install dependencies 🚀
 
-```bash
-docker-compose up
-....
+```sh
+$ yarn install
+```
+
+### Create configs
+
+Create a `.env` file at the root of the project. Make sure you follow the [`.env.example`](.env.example) file as a guide.
+
+### Run project
+
+```sh
+$ yarn dev
 ```
 
 ## Testing
