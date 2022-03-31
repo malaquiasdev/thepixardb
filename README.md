@@ -1,16 +1,48 @@
-# <img width="60" height="60" src=".github/logo.png"/> ThePixarDB
+# ThePixarDB
 
-<p align="center">
-  <img width="400" height="200" src=".github/perfil.jpg"/>
-</p>
+**ThePixarDB** is an centralized database of the feature filmes, short filmes, collections, actors, directors and much more. We have all the data you'll ever need in one place, easily accessible through with a modern RESTful API.
 
-**ThePixarDB** is an umbrella organization to provide a centralized data of the movies, documentaries and people from The Pixar Company. You can try it and make any free non-commercial project.
+**It is unofficial and we are made by fans to fans.**
 
-It is unofficial and we are made by fans to fans.
+This project is a RESTful API and will be a GraphQL API too.
 
-This project is a RESTful and will be a GraphQL API too. You will access to hundreds informations of our central database.
+## Setup Local 🖥️
 
-## To know more about us and this project please go to
+### Prerequisites 📝
+
+Before you begin, ensure you have met the following requirements:
+
+- You must have an AWS Credentials
+- Configure the [AWS CLI](https://aws.amazon.com/pt/cli/)
+- You have installed the [Node.js](https://nodejs.org/en/)
+- You have installed the [Yarn](https://yarnpkg.com)
+- You have installed the [Terraform](https://www.terraform.io)
+
+### Create the infra on AWS 🏗️
+
+```
+cd infra && terraform init && terraform terraform apply -auto-approve
+```
+
+#### Install dependencies 🚀
+
+```sh
+$ yarn install
+```
+
+### Create configs
+
+Create a `.env` file at the root of the project. Make sure you follow the [`.env.example`](.env.example) file as a guide.
+
+### Run project
+
+```sh
+$ yarn dev
+```
+
+## Testing
+
+## To know more
 
 - [About](https://thepixardb.malaquias.dev/about/)
 - [Features list]()

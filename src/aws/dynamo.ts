@@ -1,8 +1,21 @@
 import AWS from 'aws-sdk';
+import { ServiceConfigurationOptions } from 'aws-sdk/lib/service';
+
 import dotenv from 'dotenv';
 
 dotenv.config();
-const dynamodb = new AWS.DynamoDB({ region: process.env.AWS_REGION });
+
+let dynamodb = null;
+
+if (process.env.NODE_ENV === 'local') {
+  const options: ServiceConfigurationOptions = {
+    region: process.env.AWS_REGION,
+    endpoint: process.env.AWS_DYNAMODB_ENDPOINT,
+  };
+  dynamodb = new AWS.DynamoDB(options);
+} else {
+  dynamodb = new AWS.DynamoDB({ region: process.env.AWS_REGION });
+}
 
 function _unmarshall(data: any): any {
   return AWS.DynamoDB.Converter.unmarshall(data);
