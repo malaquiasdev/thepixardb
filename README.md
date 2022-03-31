@@ -6,6 +6,18 @@
 
 This project is a RESTful API and will be a GraphQL API too.
 
+## Setup Local - Docker and Compose 🗳️
+
+We are using docker for create a local environment. The process is managed by Docker Compose.
+
+This setup it's not recommend to create a production environment, for that we have a terraform module inside of the infra folder.
+
+You can start everthing by:
+
+```bash
+docker-compose up --build
+```
+
 ## Setup Local 🖥️
 
 ### Prerequisites 📝
