@@ -1,15 +1,11 @@
 export function listAllowedLanguages() {
   return [
     {
-      iso6391: 'JA',
-      description: 'Japanese',
-    },
-    {
-      iso6391: 'EN_US',
+      key: 'en',
       description: 'English (United States)',
     },
     {
-      iso6391: 'PT_BR',
+      key: 'pt',
       description: 'Portuguese (Brazil)',
     },
   ];
