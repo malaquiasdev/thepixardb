@@ -13,17 +13,19 @@ function _getImageUrl(images, ratio: string, language: string): string {
 
 export async function findMovies(tableName: string, language = 'en'): Promise<MovieListDTO[]> {
   const movies = await findMoviesBy(tableName, language);
-  return movies.map(m => {
-    return {
-      id: m.pk,
-      title: m.title,
-      description: m.descriptionShort,
-      releaseDate: m.releaseDate,
-      runtime: m.runtime,
-      posterUrl: _getImageUrl(m.images, '2_3', language),
-      bannerUrl: _getImageUrl(m.images, '16_9', language),
-    };
-  });
+  return movies
+    .map(m => {
+      return {
+        id: m.pk,
+        title: m.title,
+        description: m.descriptionShort,
+        releaseDate: m.releaseDate,
+        runtime: m.runtime,
+        posterUrl: _getImageUrl(m.images, '2_3', language),
+        bannerUrl: _getImageUrl(m.images, '16_9', language),
+      };
+    })
+    .sort((a, b) => (a.releaseDate > b.releaseDate ? -1 : 1));
 }
 
 export async function findMovie(tableName: string, id: string, language = 'en'): Promise<MovieDTO> {
