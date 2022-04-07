@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`schema should match with the snapshot 1`] = `
+Object {
+  "description": "Our languages are standard by ISO 639-1. Default value is en-US.",
+  "response": Object {
+    "200": Object {
+      "items": Object {
+        "properties": Object {
+          "description": Object {
+            "type": "string",
+          },
+          "iso6391": Object {
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+      "type": "array",
+    },
+  },
+  "tags": Array [
+    "languages",
+  ],
+}
+`;

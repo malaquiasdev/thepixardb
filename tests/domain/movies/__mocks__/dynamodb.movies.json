@@ -1,0 +1,262 @@
+[
+  {
+    "pk": {
+      "S": "MV863"
+    },
+    "sk": {
+      "S": "LANGUAGE#en"
+    },
+    "updateAt": {
+      "S": "2022-04-02T17:49:58.487Z"
+    },
+    "rating": {
+      "M": {
+        "organ": {
+          "S": "Motion Picture Association of America"
+        },
+        "value": {
+          "S": "G"
+        },
+        "key": {
+          "S": "en"
+        }
+      }
+    },
+    "runtime": {
+      "N": "92"
+    },
+    "budget": {
+      "N": "90000000"
+    },
+    "externalId": {
+      "M": {
+        "themoviedb": {
+          "N": "863"
+        },
+        "imdb": {
+          "S": "tt0120363"
+        }
+      }
+    },
+    "revenue": {
+      "N": "497366869"
+    },
+    "releaseDate": {
+      "S": "1999-10-30"
+    },
+    "createAt": {
+      "S": "2022-04-02T17:49:58.487Z"
+    },
+    "descriptionShort": {
+      "S": "When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save Woody before he becomes a museum toy property with his roundup gang Jessie, Prospector, and Bullseye."
+    },
+    "images": {
+      "L": [
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/2_3/clean_w1000_h1500.jpeg"
+            },
+            "key": {
+              "NULL": true
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/2_3/en_w800_h1171.jpeg"
+            },
+            "key": {
+              "S": "en"
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/16_9/clean_w1920_h1080.jpeg"
+            },
+            "key": {
+              "NULL": true
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/16_9/en_w1920_h1080.jpeg"
+            },
+            "key": {
+              "S": "en"
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "S": "Andy heads off to Cowboy Camp, leaving his toys to their own devices. Things shift into high gear when an obsessive toy collector named Al McWhiggen, owner of Al's Toy Barn kidnaps Woody. Andy's toys mount a daring rescue mission, Buzz Lightyear meets his match and Woody has to decide where he and his heart truly belong."
+    },
+    "genres": {
+      "L": [
+        {
+          "S": "Animation"
+        },
+        {
+          "S": "Family"
+        },
+        {
+          "S": "Comedy"
+        }
+      ]
+    },
+    "title": {
+      "S": "Toy Story 2"
+    }
+  },
+  {
+    "pk": {
+      "S": "MV508439"
+    },
+    "sk": {
+      "S": "LANGUAGE#en"
+    },
+    "updateAt": {
+      "S": "2022-04-02T17:49:58.487Z"
+    },
+    "rating": {
+      "M": {
+        "organ": {
+          "S": "Motion Picture Association of America"
+        },
+        "value": {
+          "S": "PG"
+        },
+        "key": {
+          "S": "en"
+        }
+      }
+    },
+    "runtime": {
+      "N": "103"
+    },
+    "budget": {
+      "N": "200000000"
+    },
+    "externalId": {
+      "M": {
+        "themoviedb": {
+          "N": "508439"
+        },
+        "imdb": {
+          "S": "tt7146812"
+        }
+      }
+    },
+    "revenue": {
+      "N": "141592359"
+    },
+    "releaseDate": {
+      "S": "2020-02-29"
+    },
+    "createAt": {
+      "S": "2022-04-02T17:49:58.487Z"
+    },
+    "descriptionShort": {
+      "S": "Two elven brothers embark on a quest to bring their father back for one day."
+    },
+    "images": {
+      "L": [
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/2_3/clean_w2000_h3000.jpeg"
+            },
+            "key": {
+              "NULL": true
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/2_3/en_w2000_h3000.jpeg"
+            },
+            "key": {
+              "S": "en"
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/16_9/clean_w3840_h2160.jpeg"
+            },
+            "key": {
+              "NULL": true
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        },
+        {
+          "M": {
+            "path": {
+              "S": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/16_9/en_w1440_h810.jpeg"
+            },
+            "key": {
+              "S": "en"
+            },
+            "primary": {
+              "BOOL": true
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "S": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there."
+    },
+    "genres": {
+      "L": [
+        {
+          "S": "Animation"
+        },
+        {
+          "S": "Family"
+        },
+        {
+          "S": "Comedy"
+        },
+        {
+          "S": "Fantasy"
+        },
+        {
+          "S": "Adventure"
+        }
+      ]
+    },
+    "title": {
+      "S": "Onward"
+    }
+  }
+]

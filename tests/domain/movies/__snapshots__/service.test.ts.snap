@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`findMovie should return movie 1`] = `
+Object {
+  "budget": 200000000,
+  "description": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+  "descriptionShort": "Two elven brothers embark on a quest to bring their father back for one day.",
+  "genres": Array [
+    "Animation",
+    "Family",
+    "Comedy",
+    "Fantasy",
+    "Adventure",
+  ],
+  "id": "MV508439",
+  "images": Array [
+    Object {
+      "key": "en",
+      "path": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/2_3/en_w2000_h3000.jpeg",
+      "primary": true,
+    },
+    Object {
+      "key": "en",
+      "path": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/16_9/en_w1440_h810.jpeg",
+      "primary": true,
+    },
+  ],
+  "rating": Object {
+    "key": "en",
+    "organ": "Motion Picture Association of America",
+    "value": "PG",
+  },
+  "releaseDate": "2020-02-29",
+  "revenue": 141592359,
+  "runtime": 103,
+  "title": "Onward",
+}
+`;
+
+exports[`findMovies should return movies 1`] = `
+Array [
+  Object {
+    "bannerUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/16_9/en_w1440_h810.jpeg",
+    "description": "Two elven brothers embark on a quest to bring their father back for one day.",
+    "id": "MV508439",
+    "posterUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV508439/images/2_3/en_w2000_h3000.jpeg",
+    "releaseDate": "2020-02-29",
+    "runtime": 103,
+    "title": "Onward",
+  },
+  Object {
+    "bannerUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV260514/images/16_9/en_w1920_h1080.jpeg",
+    "description": "Lightning McQueen sets out to prove to a new generation of racers that he's still the best race car in the world.",
+    "id": "MV260514",
+    "posterUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV260514/images/2_3/en_w1200_h1800.jpeg",
+    "releaseDate": "2017-06-15",
+    "runtime": 90,
+    "title": "Cars 3",
+  },
+  Object {
+    "bannerUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/16_9/en_w1920_h1080.jpeg",
+    "description": "When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save Woody before he becomes a museum toy property with his roundup gang Jessie, Prospector, and Bullseye.",
+    "id": "MV863",
+    "posterUrl": "https://raw.githubusercontent.com/malaquiasdev/thepixardb-wall-e/main/data/movies/MV863/images/2_3/en_w800_h1171.jpeg",
+    "releaseDate": "1999-10-30",
+    "runtime": 92,
+    "title": "Toy Story 2",
+  },
+]
+`;
